@@ -6,6 +6,7 @@ function CalenderForm () {
 
         e.preventDefault()
 
+
         console.log("works")
         await axios.post("http://localhost:5000", 
             {
@@ -17,7 +18,6 @@ function CalenderForm () {
                 friday: e.target.friday.value,
                 saturday: e.target.saturday.value,
                 sunday: e.target.sunday.value,
-                //       humans: e.target.value.humans,
             }
         )
     }
@@ -40,8 +40,8 @@ function CalenderForm () {
             <input type="text" id="friday" name="friday"/>
             <label htmlFor="saturday">Saturday</label>
             <input type="text" id="saturday" name="saturday"/>
-            <label htmlFor="address">Address</label>
-            <input type="text" id="address" name="address"/>
+            <label htmlFor="address" >Address</label>
+            <input type="text" id="address" name="address" placeholder="address"/>
             <button type="submit" >submit</button>
         
         </form>
