@@ -49,7 +49,7 @@ app.post('/:address', (req,res) => {
 
 app.get('/:address', (req, res) => {
     const home = homes.find(home => home.address === req.params.address)
-    res.send(home)
+    res.send(home).status(200)
 })
 
 app.listen(5000, console.log("running on port 5000 ----------------------------------------------------------------------------------------------------------------"))

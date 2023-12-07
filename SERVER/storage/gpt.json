@@ -1,0 +1,150 @@
+[
+    {
+        "address": "100",
+        "residents": [
+            { "alex": 0 },
+            { "bella": 0 },
+            { "chris": 0 }
+        ],
+        "weeks": [
+            {
+                "monday": "vacuuming",
+                "tuesday": "grocery shopping",
+                "wednesday": "dusting",
+                "thursday": "cleaning bathrooms",
+                "friday": "mopping",
+                "saturday": "yard work",
+                "sunday": "relaxing"
+            },
+            {
+                "monday": "laundry",
+                "tuesday": "meal prep",
+                "wednesday": "organizing",
+                "thursday": "cleaning windows",
+                "friday": "dishwashing",
+                "saturday": "gardening",
+                "sunday": "rest"
+            },
+            {
+                "monday": "sweeping",
+                "tuesday": "trash disposal",
+                "wednesday": "deep cleaning",
+                "thursday": "home maintenance",
+                "friday": "vacuuming",
+                "saturday": "pet care",
+                "sunday": "relaxing"
+            }
+        ]
+    },
+    {
+        "address": "200",
+        "residents": [
+            { "dylan": 0 },
+            { "emma": 0 },
+            { "finn": 0 }
+        ],
+        "weeks": [
+            {
+                "monday": "laundry",
+                "tuesday": "meal prep",
+                "wednesday": "organizing",
+                "thursday": "cleaning windows",
+                "friday": "dishwashing",
+                "saturday": "gardening",
+                "sunday": "rest"
+            },
+            {
+                "monday": "vacuuming",
+                "tuesday": "grocery shopping",
+                "wednesday": "dusting",
+                "thursday": "cleaning bathrooms",
+                "friday": "mopping",
+                "saturday": "yard work",
+                "sunday": "relaxing"
+            },
+            {
+                "monday": "sweeping",
+                "tuesday": "trash disposal",
+                "wednesday": "deep cleaning",
+                "thursday": "home maintenance",
+                "friday": "vacuuming",
+                "saturday": "pet care",
+                "sunday": "relaxing"
+            }
+        ]
+    },
+    {
+        "address": "300",
+        "residents": [
+            { "grace": 0 },
+            { "henry": 0 },
+            { "isabella": 0 }
+        ],
+        "weeks": [
+            {
+                "monday": "vacuuming",
+                "tuesday": "grocery shopping",
+                "wednesday": "dusting",
+                "thursday": "cleaning bathrooms",
+                "friday": "mopping",
+                "saturday": "yard work",
+                "sunday": "relaxing"
+            },
+            {
+                "monday": "laundry",
+                "tuesday": "meal prep",
+                "wednesday": "organizing",
+                "thursday": "cleaning windows",
+                "friday": "dishwashing",
+                "saturday": "gardening",
+                "sunday": "rest"
+            },
+            {
+                "monday": "sweeping",
+                "tuesday": "trash disposal",
+                "wednesday": "deep cleaning",
+                "thursday": "home maintenance",
+                "friday": "vacuuming",
+                "saturday": "pet care",
+                "sunday": "relaxing"
+            }
+        ]
+    },
+    {
+        "address": "400",
+        "residents": [
+            { "jackson": 0 },
+            { "kylie": 0 },
+            { "liam": 0 }
+        ],
+        "weeks": [
+            {
+                "monday": "vacuuming",
+                "tuesday": "grocery shopping",
+                "wednesday": "dusting",
+                "thursday": "cleaning bathrooms",
+                "friday": "mopping",
+                "saturday": "yard work",
+                "sunday": "relaxing"
+            },
+            {
+                "monday": "laundry",
+                "tuesday": "meal prep",
+                "wednesday": "organizing",
+                "thursday": "cleaning windows",
+                "friday": "dishwashing",
+                "saturday": "gardening",
+                "sunday": "rest"
+            },
+            {
+                "monday": "sweeping",
+                "tuesday": "trash disposal",
+                "wednesday": "deep cleaning",
+                "thursday": "home maintenance",
+                "friday": "vacuuming",
+                "saturday": "pet care",
+                "sunday": "relaxing"
+            }
+        ]
+    }
+]
