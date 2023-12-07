@@ -11,16 +11,16 @@ app.post('/', (req,res) => {
 
     const home = req.body
 
-    const humans = req.body.humans.map(human => {human : 0})
-
     const newHome =     {
         "address" : home.address,
-        "humans" : humans,
-        "weeks" : []
+        "residents" : home.residents,
+        "weeks": []
     }
 
     homes.push(newHome)
     fs.writeFileSync('./storage/homes.json', JSON.stringify(homes))
+
+    res.send(newHome).status(200)
 })
 
 app.post('/:address', (req,res) => {
