@@ -24,17 +24,12 @@ app.post('/', (req,res) => {
             "sunday" : home.sunday
         }
     }
-
     homes.push(newHome)
     fs.writeFileSync('./storage/homes.json', JSON.stringify(homes))
 })
 
 app.get('/:address', (req, res) => {
-
-    console.log("wroks")
     const home = homes.find(home => home.address === req.params.address)
-
-
     res.send(home)
 })
 
