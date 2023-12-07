@@ -30,11 +30,7 @@ app.post('/', (req,res) => {
 })
 
 app.get('/:address', (req, res) => {
-
-    console.log("wroks")
     const home = homes.find(home => home.address === req.params.address)
-
-
     res.send(home)
 })
 
