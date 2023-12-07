@@ -26,24 +26,10 @@ function NewHomeForm (){
         makenNewHouse(e)
     }
 
-    async function getExistingHouse (e){
-        const url = "http://localhost:5000"
-        const address = e.target.address.value
-        
-            const {data} = await axios.get(`${url}/${address}`)
-            console.log(data.weeks[0])
-    }
-    
-
-    function handleSearch (e) {
-        e.preventDefault()
-        getExistingHouse(e)
-    }
-
     return(
 
         <section>
-
+            <h2>New Here? Create A New House!</h2>
             <form action="submit" onSubmit={(e) => handleNewHouseSubmit(e)}>
                 <label htmlFor="address">Address:</label>
                 <input
@@ -53,7 +39,7 @@ function NewHomeForm (){
                 placeholder="Enter your address"
                 required
                 />
-                <label htmlFor="residents">First Name of each Resident:</label>
+                <label htmlFor="residents">Each Resident First Name:</label>
                 <input
                 type="text"
                 id="residents"
@@ -61,19 +47,8 @@ function NewHomeForm (){
                 placeholder="Enter the home's residents"
                 required
                 />
-                <button type="submit">Submit</button>
+                <button type="submit">CREATE</button>
             </form>
-
-                <form action="submit" onSubmit={(e)=>{handleSearch(e)}}>
-                    <label>Search for existing address:</label>
-                    <input
-                    type="text"
-                    name="address"
-                    className="search-input"
-                    placeholder="Search..."
-                    />
-                    <button type="submit">Search</button>
-                </form>
           </section>
     )
 }

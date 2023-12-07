@@ -1,9 +1,8 @@
 import "./CalenderForm.scss";
 import axios from "axios";
 
- const baseUrl = "https://project-2-api.herokuapp.com";
 
-const CalenderForm = ({ propslist }) => {
+const CalenderForm = () => {
 
   async function handleSubmit(e) { //make new week
     e.preventDefault();
@@ -28,26 +27,29 @@ const CalenderForm = ({ propslist }) => {
 
 
   return (
-
+    <>
+    <h2>Make A New Schedule For The Week:</h2>  
         <form action="submit" onSubmit={(e) => handleSubmit(e)}>
-       <label htmlFor="sunday">Sunday</label>
-       <input type="text" id="sunday" name="sunday" />
+        <label htmlFor="address">Address</label>
+       <input type="text" id="address" name="address" placeholder="...your address" />
        <label htmlFor="monday">Monday</label>
-       <input type="text" id="monday" name="monday" />
+       <input type="text" id="monday" name="monday" placeholder="...tasks and chores"/>
        <label htmlFor="tuesday">Tuesday</label>
-       <input type="text" id="tuesday" name="tuesday" />
+       <input type="text" id="tuesday" name="tuesday"  placeholder="...tasks and chores"/>
        <label htmlFor="wednesday">Wednesday</label>
-       <input type="text" id="wednesday" name="wednesday" />
+       <input type="text" id="wednesday" name="wednesday" placeholder="...tasks and chores" />
        <label htmlFor="thursday">Thursday</label>
-       <input type="text" id="thursday" name="thursday" />
+       <input type="text" id="thursday" name="thursday"  placeholder="...tasks and chores"/>
        <label htmlFor="friday">Friday</label>
-       <input type="text" id="friday" name="friday" />
+       <input type="text" id="friday" name="friday" placeholder="...tasks and chores" />
        <label htmlFor="saturday">Saturday</label>
-       <input type="text" id="saturday" name="saturday" />
-       <label htmlFor="address">Address</label>
-       <input type="text" id="address" name="address" placeholder="address" />
+       <input type="text" id="saturday" name="saturday"  placeholder="...tasks and chores"/>
+       <label htmlFor="sunday">Sunday</label>
+       <input type="text" id="sunday" name="sunday"  placeholder="...tasks and chores"/>
+
        <button type="submit">submit</button>
      </form>
+    </>
 
   );
 };

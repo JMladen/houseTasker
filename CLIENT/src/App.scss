@@ -4,10 +4,18 @@
     padding: 0rem;
 }
 
-body{
-    padding: 2rem
+.other{
+  margin-left: 12vw;
+  margin-top: 0.75rem;
 }
 
+h1{
+  margin: 1rem;
+}
+
+h2{
+  margin: 0.25rem;
+}
 
 form {
     max-width: 25rem;
@@ -38,4 +46,11 @@ form {
 
   button:hover {
     background-color: #45a049;
+  }
+
+  .main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
   }
