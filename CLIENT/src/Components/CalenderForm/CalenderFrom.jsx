@@ -3,9 +3,10 @@ import axios from "axios";
 function CalenderForm() {
   async function handleSubmit(e) {
     e.preventDefault();
+    const url = "http://localhost:5000"
+    const address = e.target.address.value
 
-    await axios.post("http://localhost:5000", {
-      address: e.target.address.value,
+    await axios.post(`${url}/${address}`, {
       monday: e.target.monday.value,
       tuesday: e.target.tuesday.value,
       wednesday: e.target.wednesday.value,
@@ -13,14 +14,7 @@ function CalenderForm() {
       friday: e.target.friday.value,
       saturday: e.target.saturday.value,
       sunday: e.target.sunday.value,
-      // <<<<<<< feature/addressGet
-      // // <<<<<<< feature/addressGet
-      // =======
-      // // <<<<<<< feature/addressBar
-      // >>>>>>> develop
 
-      // =======
-      // >>>>>>> develop
     });
   }
 
