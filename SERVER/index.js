@@ -11,18 +11,17 @@ app.post('/', (req,res) => {
 
     const home = req.body
 
-    const humans = req.body.humans.map(human => {human : 0})
-
     const newHome =     {
         "address" : home.address,
-        "humans" : humans,
+        "residents" : home.residents,
         "weeks" : []
     }
 
     homes.push(newHome)
     fs.writeFileSync('./storage/homes.json', JSON.stringify(homes))
-})
 
+    res.send(newHome).status(200)
+})
 
 app.post('/:address', (req,res) => {
 
@@ -50,7 +49,7 @@ app.post('/:address', (req,res) => {
 
 app.get('/:address', (req, res) => {
     const home = homes.find(home => home.address === req.params.address)
-    res.send(home)
+    res.send(home).status(200)
 })
 
 app.listen(5000, console.log("running on port 5000 ----------------------------------------------------------------------------------------------------------------"))
