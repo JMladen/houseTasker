@@ -6,8 +6,6 @@ function CalenderForm () {
 
         e.preventDefault()
 
-
-        console.log("works")
         await axios.post("http://localhost:5000", 
             {
                 address: e.target.address.value,
@@ -18,6 +16,10 @@ function CalenderForm () {
                 friday: e.target.friday.value,
                 saturday: e.target.saturday.value,
                 sunday: e.target.sunday.value,
+// <<<<<<< feature/addressBar
+
+// =======
+// >>>>>>> develop
             }
         )
     }
