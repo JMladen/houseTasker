@@ -23,7 +23,6 @@ app.post('/', (req,res) => {
     fs.writeFileSync('./storage/homes.json', JSON.stringify(homes))
 })
 
-
 app.post('/:address', (req,res) => {
 
     const newWeek = req.body

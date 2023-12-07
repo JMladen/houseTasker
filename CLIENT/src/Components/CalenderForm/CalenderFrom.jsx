@@ -15,7 +15,10 @@ function CalenderForm() {
       saturday: e.target.saturday.value,
       sunday: e.target.sunday.value,
 
+    }).then((response) => {
+        console.log(response)
     });
+
   }
 
   return (
