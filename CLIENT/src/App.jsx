@@ -1,11 +1,13 @@
 import AddressBar from './Components/AddressBar/AddressBar.jsx'
 import CalenderForm from './Components/CalenderForm/CalenderForm.jsx' // intellissense didnt work
+import NewHomeForm from './Components/NewHomeForm/NewHomeForm.jsx'
+import './App.scss'
 
 function App() {
 
   return (
     <>
-    {/* make new house form */}
+   <NewHomeForm />
      <CalenderForm />
      <AddressBar />
      {/* weekly schedlue */}
