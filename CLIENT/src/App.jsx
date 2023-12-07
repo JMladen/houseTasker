@@ -1,6 +1,12 @@
 
-import './App.css'
-import axios from 'axios'
+// <<<<<<< feature/addressGet
+// import './App.css'
+// import axios from 'axios'
+// =======
+// import './App.scss'
+
+// import AddressBar from './Components/AddressBar/AddressBar'
+// >>>>>>> develop
 
 import CalenderForm from './Components/CalenderForm/CalenderFrom' // intellissense didnt work
 
@@ -19,6 +25,7 @@ function App() {
   return (
     <>
      <CalenderForm />
+     <AddressBar />
     </>
   )
 }
