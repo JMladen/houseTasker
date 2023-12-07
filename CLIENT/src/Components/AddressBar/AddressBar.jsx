@@ -14,7 +14,9 @@ function AddressBar () {
         
         async function fillCalender(){
             const { data } = await axios.get(`${url}/${address}`)
-            console.log(data)
+            const week = data.weeks[e.target.week.value]
+            const humans = data.humans
+            console.log(week, humans)
         }
         
         fillCalender()
@@ -23,8 +25,11 @@ function AddressBar () {
         
         return(
             <form action='submit' className="address-bar" onSubmit={(e)=>handleSubmit(e)}>
-            <input type="text" name="address" placeholder='search home schedule by address' />
-            <button type='submit'>Search</button>
+            <label htmlFor="address">Address</label>
+            <input type="text" name="address" placeholder='home week' />
+            <label htmlFor="home">Week</label>
+            <input type="text" name="week" placeholder='sreach week'/>
+            <button type='submit'>search home by week</button>
             </form>
     )
 }
