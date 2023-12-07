@@ -1,15 +1,33 @@
 import "./CalenderForm.scss";
 import axios from "axios";
-import { useState } from "react";
-import { useParams } from "react-router-dom";
 
-// const baseUrl = "https://project-2-api.herokuapp.com";
+ const baseUrl = "https://project-2-api.herokuapp.com";
 
 const CalenderForm = ({ propslist }) => {
+
+  async function handleSubmit(e) { //make new week
+    e.preventDefault();
+    const url = "http://localhost:5000"
+    const address = e.target.address.value
+
+    await axios.post(`${url}/${address}`, {
+      monday: e.target.monday.value,
+      tuesday: e.target.tuesday.value,
+      wednesday: e.target.wednesday.value,
+      thursday: e.target.thursday.value,
+      friday: e.target.friday.value,
+      saturday: e.target.saturday.value,
+      sunday: e.target.sunday.value,
+
+    }).then((response) => {
+        console.log(response)
+    });
+
+  }
   return (
     <div className="main-container">
       <div className="left-container">
-        {propslist.map((home, index) => (
+        {/* {propslist.map((home, index) => (
           <div key={index} className="avatar-container">
             <img
               src="assets//Images/Mohan-muruge.jpg"
@@ -22,7 +40,7 @@ const CalenderForm = ({ propslist }) => {
               <li>Chore 3</li>
             </ul>
           </div>
-        ))}
+        ))} */}
       </div>
       <div className="right-container">
         <div className="right-top-title">
@@ -30,6 +48,8 @@ const CalenderForm = ({ propslist }) => {
           <h2>Search existing homes</h2>
         </div>
         <div className="right-container__top">
+
+          {/* create new house */}
           <form className="form-container">
             <label htmlFor="address">Address:</label>
             <input
@@ -49,7 +69,7 @@ const CalenderForm = ({ propslist }) => {
             />
             <button type="submit">Submit</button>
           </form>
-
+{/* search exiting house */}
           <div className="search-bar">
             <label>Search for existing address:</label>
             <input
@@ -62,22 +82,25 @@ const CalenderForm = ({ propslist }) => {
         </div>
         <div className="right-container__bottom">
           <h2>Select your chores:</h2>
-          <form className="form-container">
-            {propslist.length > 0 &&
-              Object.keys(propslist[0].weeks[0]).map((day) => (
-                <React.Fragment key={day}>
-                  <label htmlFor={day.toLowerCase()}>{day}:</label>
-                  <input
-                    type="text"
-                    id={day.toLowerCase()}
-                    name={day.toLowerCase()}
-                    placeholder={`Enter your daily chores for ${day.toLowerCase()}`}
-                    required
-                  />
-                </React.Fragment>
-              ))}
-            <button type="submit">Submit</button>
-          </form>
+        <form action="submit" onSubmit={(e) => handleSubmit(e)}>
+       <label htmlFor="sunday">Sunday</label>
+       <input type="text" id="sunday" name="sunday" />
+       <label htmlFor="monday">Monday</label>
+       <input type="text" id="monday" name="monday" />
+       <label htmlFor="tuesday">Tuesday</label>
+       <input type="text" id="tuesday" name="tuesday" />
+       <label htmlFor="wednesday">Wednesday</label>
+       <input type="text" id="wednesday" name="wednesday" />
+       <label htmlFor="thursday">Thursday</label>
+       <input type="text" id="thursday" name="thursday" />
+       <label htmlFor="friday">Friday</label>
+       <input type="text" id="friday" name="friday" />
+       <label htmlFor="saturday">Saturday</label>
+       <input type="text" id="saturday" name="saturday" />
+       <label htmlFor="address">Address</label>
+       <input type="text" id="address" name="address" placeholder="address" />
+       <button type="submit">submit</button>
+     </form>
 
           <div className="search-bar">
             <label>Search for a specific week:</label>
