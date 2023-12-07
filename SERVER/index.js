@@ -24,7 +24,6 @@ app.post('/', (req,res) => {
             "sunday" : home.sunday
         }
     }
-
     homes.push(newHome)
     fs.writeFileSync('./storage/homes.json', JSON.stringify(homes))
 })
