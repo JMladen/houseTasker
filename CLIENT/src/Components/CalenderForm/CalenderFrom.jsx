@@ -16,7 +16,10 @@ function CalenderForm () {
                 friday: e.target.friday.value,
                 saturday: e.target.saturday.value,
                 sunday: e.target.sunday.value,
+// <<<<<<< feature/addressBar
 
+// =======
+// >>>>>>> develop
             }
         )
     }
