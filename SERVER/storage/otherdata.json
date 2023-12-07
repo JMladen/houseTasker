@@ -1,7 +1,7 @@
 [
 {
     "address" : "1",
-    "humans" : [
+    "residents" : [
         {"jack" : 0},
         {"jill" : 0},
         {"jon" : 0}
@@ -34,7 +34,7 @@
 },
 {
     "address" : "2",
-    "humans" : [
+    "residents" : [
         {"jackjack" : 0},
         {"jill" : 0},
         {"jon" : 0}
@@ -67,7 +67,7 @@
 },
 {
     "address" : "3",
-    "humans" : [
+    "residents" : [
         {"jack" : 0},
         {"jill" : 0},
         {"jonjonjon" : 0}
@@ -100,7 +100,7 @@
 },
 {
     "address" : "14",
-    "humans" : [
+    "residents" : [
         {"jack" : 0},
         {"jilljiljiljil" : 0},
         {"jon" : 0}

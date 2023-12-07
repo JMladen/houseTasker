@@ -1,8 +1,11 @@
 import './AddressBar.scss'
 import axios from 'axios'
+import WeeklyCalender from '../WeeklyCalendar/WeeklyCalendar'
+import { useState } from 'react'
 
 function AddressBar () {
 
+    const [week, setWeek] = useState({})
 
     function handleSubmit (e){
 
@@ -15,6 +18,7 @@ function AddressBar () {
         async function fillCalender(){
             const { data } = await axios.get(`${url}/${address}`)
             const week = data.weeks[e.target.week.value]
+            setWeek(week)
             const humans = data.humans
             console.log(week, humans)
         }
@@ -24,6 +28,8 @@ function AddressBar () {
     }
         
         return(
+
+            <>
             <form action='submit' className="address-bar" onSubmit={(e)=>handleSubmit(e)}>
             <label htmlFor="address">Address</label>
             <input type="text" name="address" placeholder='home week' />
@@ -31,6 +37,9 @@ function AddressBar () {
             <input type="text" name="week" placeholder='sreach week'/>
             <button type='submit'>search home by week</button>
             </form>
+            < WeeklyCalender week={week} />
+
+            </>
     )
 }
 
